@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imagham's Portfolio</title>
   <style>
     * {
       margin: 0;
@@ -14,10 +14,10 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(270deg, #667eea, #764ba2, #89f7fe, #66a6ff);
+      background: linear-gradient(270deg, #1e1e2f, #2d2e40, #34344e, #1e1e2f);
       background-size: 800% 800%;
-      animation: gradientBG 15s ease infinite;
-      color: white;
+      animation: gradientBG 20s ease infinite;
+      color: #e0e0e0;
       overflow-x: hidden;
     }
 
@@ -25,6 +25,30 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      background: rgba(20, 20, 30, 0.5);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
     }
 
     header {
@@ -37,30 +61,6 @@
       padding: 0 2rem;
       position: relative;
       z-index: 1;
-    }
-
-    nav {
-      width: 100%;
-      position: sticky;
-      top: 0;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      z-index: 999;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffeb3b;
     }
 
     h1 {
@@ -83,8 +83,8 @@
     .btn {
       padding: 0.8rem 2rem;
       font-size: 1rem;
-      background: white;
-      color: #764ba2;
+      background: #f1c40f;
+      color: #1e1e2f;
       border: none;
       border-radius: 50px;
       cursor: pointer;
@@ -94,8 +94,8 @@
     }
 
     .btn:hover {
-      background: #e0e0e0;
-      transform: scale(1.05);
+      background: #d4ac0d;
+      color: #fff;
     }
 
     section {
@@ -114,7 +114,7 @@
     }
 
     .feature, .project {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
       padding: 2rem;
       border-radius: 20px;
@@ -124,7 +124,7 @@
 
     .feature:hover, .project:hover {
       transform: translateY(-10px) scale(1.03);
-      background: rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
     }
 
     footer {
@@ -139,7 +139,7 @@
       bottom: -100px;
       width: 40px;
       height: 40px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 50%;
       animation: rise 15s infinite ease-in;
       z-index: 0;
@@ -151,7 +151,6 @@
       100% { bottom: 110%; transform: translateX(100px) scale(1.5); opacity: 0; }
     }
 
-    /* Animation Fade In */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -201,15 +200,15 @@
     </p>
     
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+      <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px;">
         <h3>Creative Developer</h3>
         <p style="margin-top: 1rem;">I craft beautiful, interactive websites and web apps that perform smoothly across all devices.</p>
       </div>
-      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+      <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px;">
         <h3>UI/UX Enthusiast</h3>
         <p style="margin-top: 1rem;">User experience is at the heart of my design. I focus on clarity, flow, and emotional impact in every project.</p>
       </div>
-      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+      <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px;">
         <h3>Professional Photographer</h3>
         <p style="margin-top: 1rem;">Through the lens, I capture moments that tell authentic, meaningful stories — from portraits to landscapes.</p>
       </div>
@@ -217,8 +216,7 @@
   
     <a href="#skills" class="btn" style="margin-top: 3rem;">Explore My Skills</a>
   </section>
-  
-  
+
   <!-- Skills Section -->
   <section id="skills" class="fade-in">
     <h2>Skills</h2>
@@ -258,20 +256,54 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>Feel free to reach out via email if you want to collaborate!</p>
-    <a href="mailto:your.email@example.com" class="btn">Send Email</a>
+  <!-- Contact Section -->
+<section id="contact" class="fade-in" style="background-color: #2a2a2a; color: white; padding: 6rem 2rem; text-align: center; position: relative;">
+    <h2>Contact Imagham</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+      Hey there! I'm Imagham — a creative frontend developer, UI/UX enthusiast, and professional photographer. 
+      I believe in building stunning web experiences that truly resonate with users. Whether it's designing beautiful interfaces, 
+      developing interactive websites, or capturing breathtaking moments with my camera, I bring passion and artistry into everything I do. 
+      Let's collaborate and create something amazing together!
+    </p>
+    
+    <!-- Email & Social Links -->
+    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+      <a href="mailto:your.email@example.com" class="btn" style="padding: 0.8rem 2rem; background: #ff7f50; color: white; border-radius: 30px; font-size: 1.1rem;">Send Email</a>
+      <a href="https://www.linkedin.com/in/imagham" target="_blank" class="btn" style="padding: 0.8rem 2rem; background: #0e76a8; color: white; border-radius: 30px; font-size: 1.1rem;">LinkedIn</a>
+      <a href="https://github.com/imagham" target="_blank" class="btn" style="padding: 0.8rem 2rem; background: #333; color: white; border-radius: 30px; font-size: 1.1rem;">GitHub</a>
+    </div>
+    
+    <!-- Contact Form -->
+    <h3>Or Fill Out the Form Below</h3>
+    <form action="#" method="POST" style="max-width: 600px; margin: auto; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
+      <div style="margin-bottom: 1rem;">
+        <label for="name" style="display: block; font-size: 1rem; margin-bottom: 0.5rem;">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 1rem; background: #1e1e1e; color: white; border: none; border-radius: 5px;">
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="email" style="display: block; font-size: 1rem; margin-bottom: 0.5rem;">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 1rem; background: #1e1e1e; color: white; border: none; border-radius: 5px;">
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="message" style="display: block; font-size: 1rem; margin-bottom: 0.5rem;">Your Message</label>
+        <textarea id="message" name="message" placeholder="Type your message here" style="width: 100%; padding: 1rem; background: #1e1e1e; color: white; border: none; border-radius: 5px;" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn" style="background: #ff7f50; color: white; padding: 1rem 3rem; font-size: 1rem; border-radius: 30px;">Send Message</button>
+    </form>
+  
+    <!-- Footer or Closing Message -->
+    <p style="font-size: 1rem; margin-top: 2rem; color: rgba(255, 255, 255, 0.7);">I'm looking forward to hearing from you!</p>
   </section>
+      
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 My Portfolio. All rights reserved.</p>
+    <p>© 2025 Imagham. All rights reserved.</p>
   </footer>
 
-  <!-- Typing Effect -->
+  <!-- Typing Effect Script -->
   <script>
-    const text = "Hi, I'm Your Name!";
+    const text = "Hi, I'm Imagham!";
     let index = 0;
     const typingElement = document.getElementById('typing');
 
@@ -284,7 +316,7 @@
     }
     type();
 
-    // Trigger fade-in animations
+    // Fade-in animation on scroll
     const sections = document.querySelectorAll('.fade-in');
     window.addEventListener('scroll', () => {
       const triggerBottom = window.innerHeight / 5 * 4;
@@ -297,6 +329,5 @@
       });
     });
   </script>
-
 </body>
 </html>
