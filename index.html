@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #667eea, #764ba2, #89f7fe, #66a6ff);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      min-height: 60px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: white;
+      color: #764ba2;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature, .project {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 20px;
+      width: 300px;
+      transition: 0.3s;
+    }
+
+    .feature:hover, .project:hover {
+      transform: translateY(-10px) scale(1.03);
+      background: rgba(255,255,255,0.25);
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      font-size: 1rem;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: rise 15s infinite ease-in;
+      z-index: 0;
+    }
+
+    @keyframes rise {
+      0% { bottom: -100px; transform: translateX(0) scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      100% { bottom: 110%; transform: translateX(100px) scale(1.5); opacity: 0; }
+    }
+
+    /* Animation Fade In */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bubbles -->
+  <div class="bubble" style="left:10%; animation-duration:18s;"></div>
+  <div class="bubble" style="left:25%; animation-duration:14s;"></div>
+  <div class="bubble" style="left:40%; animation-duration:16s;"></div>
+  <div class="bubble" style="left:60%; animation-duration:12s;"></div>
+  <div class="bubble" style="left:75%; animation-duration:20s;"></div>
+  <div class="bubble" style="left:90%; animation-duration:17s;"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1 id="typing"></h1>
+    <p>Frontend Developer | UI/UX Enthusiast | Dream Builder</p>
+    <a href="#about" class="btn">About Me</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Imagham</h2>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: auto; margin-bottom: 2rem;">
+      Hello! I'm <strong>Imagham</strong> — a creative frontend developer, UI/UX designer, and professional photographer.  
+      I believe that whether it's through a website or a camera lens, every project should tell a powerful story.  
+      With a passion for stunning visuals and seamless user experiences, I blend technology and artistry to create work that connects and inspires.
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+        <h3>Creative Developer</h3>
+        <p style="margin-top: 1rem;">I craft beautiful, interactive websites and web apps that perform smoothly across all devices.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+        <h3>UI/UX Enthusiast</h3>
+        <p style="margin-top: 1rem;">User experience is at the heart of my design. I focus on clarity, flow, and emotional impact in every project.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; width: 300px; transition: 0.3s;">
+        <h3>Professional Photographer</h3>
+        <p style="margin-top: 1rem;">Through the lens, I capture moments that tell authentic, meaningful stories — from portraits to landscapes.</p>
+      </div>
+    </div>
+  
+    <a href="#skills" class="btn" style="margin-top: 3rem;">Explore My Skills</a>
+  </section>
+  
+  
+  <!-- Skills Section -->
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>HTML5 & CSS3</h3>
+        <p>Clean, modern, and responsive layouts.</p>
+      </div>
+      <div class="feature">
+        <h3>JavaScript</h3>
+        <p>Interactive elements and dynamic features.</p>
+      </div>
+      <div class="feature">
+        <h3>UI/UX Design</h3>
+        <p>Designing user-friendly experiences that delight users.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Landing Page</h3>
+        <p>A modern, responsive landing page for a tech startup.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website to showcase skills and works.</p>
+      </div>
+      <div class="project">
+        <h3>Interactive Web App</h3>
+        <p>Building dynamic web apps using JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email if you want to collaborate!</p>
+    <a href="mailto:your.email@example.com" class="btn">Send Email</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- Typing Effect -->
+  <script>
+    const text = "Hi, I'm Your Name!";
+    let index = 0;
+    const typingElement = document.getElementById('typing');
+
+    function type() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    type();
+
+    // Trigger fade-in animations
+    const sections = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight / 5 * 4;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < triggerBottom) {
+          sec.style.animationDelay = "0s";
+          sec.style.animationPlayState = "running";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
